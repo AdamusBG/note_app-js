@@ -1,11 +1,11 @@
-
-
 const app = document.getElementById('app');
 
-let myNoteList = new NoteList();
-myNoteList.addNote("Testing1");
-myNoteList.addNote("Testing one two three");
+myNoteList = new NoteList;
+myNoteList.addNote("Howdy1");
+myNoteList.addNote("Howdy2");
 
-myNoteController = new NoteController(new NoteListView(myNoteList), app);
+myNoteListView = new NoteListView(myNoteList);
 
-app.updateElement();
+myNoteController = new NoteController(myNoteListView, app);
+
+myNoteController.updateElement();
