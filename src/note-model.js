@@ -1,9 +1,9 @@
 class Note {
-  constructor (note) {
-    this.note = note;
+  constructor (text) {
+    this.text = text;
   }
 
   getNote() {
-    return this.note;
+    return this.text;
   }
 }

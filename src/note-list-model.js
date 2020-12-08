@@ -1,10 +1,11 @@
 class NoteList {
-  constructor() {
+  constructor(noteClass = Note) {
+    this.noteClass = noteClass;
     this.noteList = [];
   };
 
   addNote(note) {
-    this.noteList.push(note);
+    this.noteList.push(new this.noteClass(note));
   }
 
   getNoteList() {
