@@ -6,7 +6,7 @@ class NoteListView {
   getHTMLNotes() {
     var string = "<ul>";
     for (var i = 0; i < this.noteList.getNoteList().length; i++){
-      string = string + `<li><div id="${i}">${this.#shortenText(this.noteList.getNoteList()[i].getNote())}</div></li>`;
+      string = string + `<li><a href="#notes/${i}">${this.#shortenText(this.noteList.getNoteList()[i].getNote())}</a></li>`;
     }
     string = string + "</ul>";
     return string;

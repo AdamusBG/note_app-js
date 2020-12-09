@@ -16,5 +16,5 @@ it("Calling getHTMLNotes when the internal note list is empty returns the correc
 
 it("Calling getHTMLNotes when the internal note list has three notes returns the correct HTML string, with notes over 20 characters shortened and appended with an elipsis and a unique id for each note", function() {
   noteListView = new NoteListView(mockNoteList);
-  expect(noteListView.getHTMLNotes()).toEqual("<ul><li><div id=\"0\">I like cheese</div></li><li><div id=\"1\">Actually, I don't re...</div></li><li><div id=\"2\">Changed my mind agai...</div></li></ul>");
+  expect(noteListView.getHTMLNotes()).toEqual("<ul><li><a href=\"#notes/0\">I like cheese</a></li><li><a href=\"#notes/1\">Actually, I don't re...</a></li><li><a href=\"#notes/2\">Changed my mind agai...</a></li></ul>");
 })
