@@ -1,3 +1,6 @@
+console.log("Single note view tests")
+console.log("--------------------")
+
 let fakeNote = { getNote: function() {
   return "I am one, single, solitary note"
 } }

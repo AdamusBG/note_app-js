@@ -1,3 +1,6 @@
+console.log("Note list model tests")
+console.log("--------------------")
+
 class fakeNoteClass {
   constructor(text) {
     this.text = text;

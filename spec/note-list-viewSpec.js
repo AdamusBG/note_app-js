@@ -1,3 +1,6 @@
+console.log("Note list view tests")
+console.log("--------------------")
+
 let mockNote1 = { getNote: function() {return "I like cheese"}}
 let mockNote2 = { getNote: function() {return "Actually, I don't really like cheese"}}
 let mockNote3 = { getNote: function() {return "Changed my mind again, cheese is the best"}}

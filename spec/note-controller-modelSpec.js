@@ -1,3 +1,6 @@
+console.log("Note controller model tests")
+console.log("--------------------")
+
 let fakeNoteListView = {
   getHTMLNotes: function() {
     return "<ul><li><div>Note1</div></li><li><div>Note1</div></li></ul>"
