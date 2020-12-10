@@ -7,9 +7,9 @@ myNoteList.addNote("I am a fairly long note");
 myNoteList.addNote("Another good note, click me");
 myNoteList.addNote("I am a third note on the page");
 
-myNoteListView = new NoteListView(myNoteList);
-
-myNoteController = new NoteController(myNoteListView, app);
+var myNoteController = new NoteController();
+myNoteController.setNoteList(myNoteList);
+myNoteController.setElement(app);
 
 myNoteController.updateElement();
 
