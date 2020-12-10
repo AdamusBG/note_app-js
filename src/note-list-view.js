@@ -12,6 +12,10 @@ class NoteListView {
     return string;
   }
 
+  getNoteList() {
+    return this.noteList;
+  }
+
   #shortenText(text) {
     if (text.length <= 20) {
       return text;

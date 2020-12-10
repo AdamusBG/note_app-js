@@ -1,9 +1,19 @@
 console.log("Note controller model tests")
 console.log("--------------------")
 
-let fakeNoteListView = {
+class fakeNoteListViewClass {
+  constructor(noteList) {
+    this.noteList = noteList;
+  }
+
+  getHTMLNotes() {
+    return `<ul><li><a href="#notes/0">${this.noteList.getHTMLNotes()[0]}</a></li><li><a href="#notes/0">${this.noteList.getHTMLNotes()[1]}</a></li></ul>`;
+  }
+}
+
+let fakeNoteList = {
   getHTMLNotes: function() {
-    return "<ul><li><div>Note1</div></li><li><div>Note1</div></li></ul>"
+    return ["note1", "note2"]
   }
 }
 
@@ -12,7 +22,9 @@ let fakeElement = {
 }
 
 it("Calling updateElement will cause the elements innerHTML to change", function() {
-  var myNoteController = new NoteController(fakeNoteListView, fakeElement);
+  var myNoteController = new NoteController(fakeNoteListViewClass);
+  myNoteController.setNoteList(fakeNoteList);
+  myNoteController.setElement(fakeElement);
   myNoteController.updateElement();
-  expect(fakeElement.innerHTML).toEqual("<ul><li><div>Note1</div></li><li><div>Note1</div></li></ul>");
+  expect(fakeElement.innerHTML).toEqual("<ul><li><a href=\"#notes/0\">note1</a></li><li><a href=\"#notes/0\">note2</a></li></ul>");
 })
